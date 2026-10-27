@@ -1,4 +1,4 @@
-name: Publish study presentation
+name: Publish Personal AI website
 on:
   push:
     branches: [main]
@@ -23,7 +23,7 @@ jobs:
         with:
           repository: zxyzx0430/personal-ai-web
           ref: main
-      - run: mkdir -p _site && cp study/index.html _site/index.html
+      - run: mkdir -p _site && cp -a index.html .nojekyll about adult needs resources study _site/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
